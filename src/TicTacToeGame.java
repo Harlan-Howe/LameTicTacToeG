@@ -37,22 +37,32 @@ public class TicTacToeGame
         System.out.println("-+-+-");
         System.out.println(square7+"|"+square8+"|"+square9);
         // loop while we should keep playing
-
-            // say whose turn it is
+        while (keepPlaying )
+        {   // say whose turn it is
+            System.out.println("Hey, player "+whoseTurn+", it's your turn!");
 
             // ask what square the person wants.
 
             // make the change
 
             // print the board again
-            System.out.println(square1+"|"+square2+"|"+square3);
+            System.out.println(square1 + "|" + square2 + "|" + square3);
             System.out.println("-+-+-");
-            System.out.println(square4+"|"+square5+"|"+square6);
+            System.out.println(square4 + "|" + square5 + "|" + square6);
             System.out.println("-+-+-");
-            System.out.println(square7+"|"+square8+"|"+square9);
+            System.out.println(square7 + "|" + square8 + "|" + square9);
             // check if the player just won.
 
             // switch whose turn it is.
+            if (whoseTurn.equals("X"))
+            {
+                whoseTurn = "O";
+            }
+            else
+            {
+                whoseTurn = "X";
+            }
+        }
     }
 
 }
