@@ -30,7 +30,21 @@ public class TicTacToeGame
      */
     public void playGame()
     {
+        // print the board
 
+        // loop while we should keep playing
+
+            // say whose turn it is
+
+            // ask what square the person wants.
+
+            // make the change
+
+            // print the board again
+
+            // check if the player just won.
+
+            // switch whose turn it is.
     }
 
 }
