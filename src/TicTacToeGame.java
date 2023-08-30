@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TicTacToeGame
 {
     // create class variables here....
@@ -5,7 +7,7 @@ public class TicTacToeGame
     private String square6, square7, square8, square9;
     private String whoseTurn;
     private boolean keepPlaying;
-
+    private Scanner keyReader;
     /**
      * Constructor
      */
@@ -22,7 +24,7 @@ public class TicTacToeGame
         square9 = "9";
         whoseTurn = "X";
         keepPlaying = true;
-
+        keyReader = new Scanner(System.in);
     }
 
     /**
@@ -41,8 +43,16 @@ public class TicTacToeGame
         {   // say whose turn it is
             System.out.println("Hey, player "+whoseTurn+", it's your turn!");
 
-            // ask what square the person wants.
-
+            int whichSquare = -1;
+            // keep asking until we get a good answer...
+            while (whichSquare < 1 || whichSquare > 9)
+            {
+                System.out.print("What square do you want? ");
+                // ask what square the person wants.
+                whichSquare = keyReader.nextInt();
+                // check whether it is legal
+            }
+            System.out.println("You chose square "+whichSquare);
             // make the change
 
             // print the board again
@@ -52,6 +62,8 @@ public class TicTacToeGame
             System.out.println("-+-+-");
             System.out.println(square7 + "|" + square8 + "|" + square9);
             // check if the player just won.
+
+            // check if it's a tie...
 
             // switch whose turn it is.
             if (whoseTurn.equals("X"))
